@@ -1,0 +1,236 @@
+{
+	"info": {
+		"_postman_id": "81f69976-2675-4e54-a02d-1e640d4e4dd5",
+		"name": "REQRES",
+		"schema": "https://schema.postman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Users List",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "a76d8877-0b9f-46e1-bf27-b57eddc61703",
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"pm.test(\"body contains first_name\", function () {\r",
+							"    pm.expect(pm.response.text()).to.include(\"Michael\");\r",
+							"});"
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"id": "c5a9441f-ae10-4a07-a6a4-555b06cdee03",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://reqres.in/api/users?page=2",
+					"protocol": "https",
+					"host": [
+						"reqres",
+						"in"
+					],
+					"path": [
+						"api",
+						"users"
+					],
+					"query": [
+						{
+							"key": "page",
+							"value": "2"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Single User",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "bfa352e7-23b8-4d16-a283-c04267853fa5",
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"pm.test(\"Data object key check\", () => {\r",
+							"    const jsonData = pm.response.json();\r",
+							"    pm.expect(jsonData.data).to.have.property('id');\r",
+							"    pm.expect(jsonData.data).to.have.property('email');\r",
+							"    pm.expect(jsonData.data).to.have.property('first_name');\r",
+							"    pm.expect(jsonData.data).to.have.property('last_name');\r",
+							"    pm.expect(jsonData.data).to.have.property('avatar');\r",
+							"});\r",
+							""
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"id": "b2f9c9b4-8493-45b7-b2ae-5a2cfbf33d20",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "https://reqres.in/api/users/2"
+			},
+			"response": []
+		},
+		{
+			"name": "Create User",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "995edee4-2298-4c92-ba71-67f91c2ce427",
+						"exec": [
+							"pm.test(\"Response body key check\", function () {\r",
+							"    const jsonData = pm.response.json();\r",
+							"    pm.expect(jsonData).to.have.property('name');\r",
+							"    pm.expect(jsonData).to.have.property('job');\r",
+							"    pm.expect(jsonData).to.have.property('Email');\r",
+							"    pm.expect(jsonData).to.have.property('id');\r",
+							"    pm.expect(jsonData).to.have.property('createdAt');\r",
+							"});\r",
+							"pm.test(\"Status code is 201\", function () {\r",
+							"    pm.response.to.have.status(201);\r",
+							"});"
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				},
+				{
+					"listen": "prerequest",
+					"script": {
+						"id": "2297350b-410f-492d-b1e0-b2995315f25e",
+						"exec": [
+							"// Pre-test script to create 6 new users\r",
+							"const userData = [\r",
+							"    { \"name\": \"John Doe\", \"job\": \"Software Engineer\" },\r",
+							"    { \"name\": \"Jane Smith\", \"job\": \"Data Scientist\" },\r",
+							"    { \"name\": \"Peter Jones\", \"job\": \"Product Manager\" },\r",
+							"    { \"name\": \"Alice Brown\", \"job\": \"QA Engineer\" },\r",
+							"    { \"name\": \"Bob Williams\", \"job\": \"UX Designer\" },\r",
+							"    { \"name\": \"Carol Davis\", \"job\": \"DevOps Engineer\" }\r",
+							"];"
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"id": "12326b5a-d5c8-4f00-9df6-e2f65e6334f6",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"{{$randomUserName}}\",\r\n    \"job\": \"{{$randomJobTitle}}\",\r\n    \"Email\":\"{{$randomEmail}}\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "https://reqres.in/api/users"
+			},
+			"response": []
+		},
+		{
+			"name": "Update User",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "09d8ac1b-7298-41ad-9e4b-84432db457d1",
+						"exec": [
+							"pm.test(\"Status code is 201\", function () {\r",
+							"    pm.response.to.have.status(201);\r",
+							"});"
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"id": "e2f03366-b6d6-4929-a46a-99ea8aa59e77",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Cristiano\",\r\n    \"job\": \"Team Captain\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "https://reqres.in/api/users/2"
+			},
+			"response": []
+		},
+		{
+			"name": "Unsuccessful Login",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "7cb2d5a5-7a53-44b4-bea4-e48e5fa41700",
+						"exec": [
+							"pm.test(\"Check error message\", () => {\r",
+							"    const jsonData = pm.response.json();\r",
+							"    pm.expect(jsonData.error).to.eql(\"Missing password\");\r",
+							"});\r",
+							"pm.test(\"Status code is 400\", function () {\r",
+							"    pm.response.to.have.status(400);\r",
+							"});"
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"id": "fff9b487-46ea-4b42-b6fd-be081121a633",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\": \"peter@klaven\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "https://reqres.in/api/login"
+			},
+			"response": []
+		}
+	]
+}
