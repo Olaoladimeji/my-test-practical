@@ -18,7 +18,11 @@
 							"});\r",
 							"pm.test(\"body contains first_name\", function () {\r",
 							"    pm.expect(pm.response.text()).to.include(\"Michael\");\r",
-							"});"
+							"});\r",
+							"pm.test(\"Content-Type is application/json\", () => {\r",
+							"    pm.response.to.have.header(\"Content-Type\", \"application/json; charset=utf-8\");\r",
+							"});\r",
+							""
 						],
 						"type": "text/javascript",
 						"packages": {}
