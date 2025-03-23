@@ -33,11 +33,9 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "https://reqres.in/api/users?page=2",
-					"protocol": "https",
+					"raw": "{{base_url}}/api/users?page=2",
 					"host": [
-						"reqres",
-						"in"
+						"{{base_url}}"
 					],
 					"path": [
 						"api",
@@ -86,7 +84,7 @@
 			"request": {
 				"method": "GET",
 				"header": [],
-				"url": "https://reqres.in/api/users/2"
+				"url": "{{base_url}}/api/users/2"
 			},
 			"response": []
 		},
@@ -150,7 +148,7 @@
 						}
 					}
 				},
-				"url": "https://reqres.in/api/users"
+				"url": "{{base_url}}/api/users"
 			},
 			"response": []
 		},
@@ -187,7 +185,7 @@
 						}
 					}
 				},
-				"url": "https://reqres.in/api/users/2"
+				"url": "{{base_url}}/api/users/2"
 			},
 			"response": []
 		},
@@ -228,9 +226,40 @@
 						}
 					}
 				},
-				"url": "https://reqres.in/api/login"
+				"url": "{{base_url}}/api/login"
 			},
 			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"id": "a84c0bcb-db2c-4ac3-9fba-4e0d1ec79848",
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"id": "40ba3589-a5cf-4f48-a6b6-d92b70471076",
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "base_url",
+			"value": "https://reqres.in",
+			"type": "string"
 		}
 	]
 }
