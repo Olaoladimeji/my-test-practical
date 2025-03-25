@@ -235,7 +235,7 @@
 			"response": []
 		},
 		{
-			"name": "New Request",
+			"name": "Successful Register",
 			"event": [
 				{
 					"listen": "test",
