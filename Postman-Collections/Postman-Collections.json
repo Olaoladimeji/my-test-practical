@@ -236,13 +236,38 @@
 		},
 		{
 			"name": "New Request",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "18dce67b-cd2f-4c5e-b416-e34375475df8",
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});"
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
 			"id": "5b35a024-a69e-4eb8-9488-f0f4902850de",
 			"protocolProfileBehavior": {
 				"disableBodyPruning": true
 			},
 			"request": {
-				"method": "GET",
-				"header": []
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\": \"eve.holt@reqres.in\",\r\n    \"password\": \"pistol\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "https://reqres.in/api/register"
 			},
 			"response": []
 		}
