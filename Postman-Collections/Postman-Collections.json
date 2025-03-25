@@ -276,6 +276,19 @@
 				"url": "{{base_url}}/api/register"
 			},
 			"response": []
+		},
+		{
+			"name": "Lists resources",
+			"id": "0b775d1d-a164-4f33-92b2-b65eeea13901",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "{{base_url}}/api/unknown"
+			},
+			"response": []
 		}
 	],
 	"event": [
