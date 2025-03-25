@@ -288,7 +288,10 @@
 							"pm.test(\"Number of items per page should be 6 \", function () {\r",
 							"    var jsonData = pm.response.json();\r",
 							"    pm.expect(jsonData.per_page).to.eql(6);\r",
-							"});"
+							"});\r",
+							"pm.test(\"Response Text\", function () {\r",
+							"\tpm.expect(pm.response.text()).to.include(\"page,\")\r",
+							"})"
 						],
 						"type": "text/javascript",
 						"packages": {}
