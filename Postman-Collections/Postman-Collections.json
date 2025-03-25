@@ -279,6 +279,22 @@
 		},
 		{
 			"name": "Lists resources",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "abfb484d-405c-42b7-828a-2021e3960d2d",
+						"exec": [
+							"// No changes needed for response time test\r",
+							"def test_total(self):\r",
+							"    self.assertEqual(self.data['total'], 12);\r",
+							""
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
 			"id": "0b775d1d-a164-4f33-92b2-b65eeea13901",
 			"protocolProfileBehavior": {
 				"disableBodyPruning": true
