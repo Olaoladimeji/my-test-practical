@@ -152,7 +152,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "// Set the request body\r\n    const requestBody = {\r\n        \"name\": \"{{randomUserName}}\",\r\n        \"job\": \"{{randomJobTitle}}\",\r\n        \"Email\": \"{{randomEmail}}\",\r\n    };\r\n",
+					"raw": "{\r\n        \"name\": \"{{$randomUserName}}\",\r\n        \"job\": \"{{$randomJobTitle}}\",\r\n        \"Email\": \"{{$randomEmail}}\"\r\n    }\r\n",
 					"options": {
 						"raw": {
 							"language": "json"
