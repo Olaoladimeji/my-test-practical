@@ -285,7 +285,7 @@
 					"script": {
 						"id": "abfb484d-405c-42b7-828a-2021e3960d2d",
 						"exec": [
-							"pm.test(\"Your test name\", function () {\r",
+							"pm.test(\"Number of items per page should be 6 \", function () {\r",
 							"    var jsonData = pm.response.json();\r",
 							"    pm.expect(jsonData.per_page).to.eql(6);\r",
 							"});"
