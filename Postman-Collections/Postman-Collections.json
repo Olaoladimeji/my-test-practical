@@ -247,7 +247,7 @@
 							"});\r",
 							"pm.test(\"Response body key check\", function () {\r",
 							"    const jsonData = pm.response.json();\r",
-							"    pm.expect(jsonData).to.have.property('token');\r",
+							"    pm.expect(jsonData).to.have.property('id');\r",
 							"    pm.expect(jsonData).to.have.property('token');\r",
 							"    });\r",
 							""
