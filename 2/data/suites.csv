@@ -1,6 +1,0 @@
-"DESCRIPTION","DURATION IN MS","NAME","PARENT SUITE","START TIME","STATUS","STOP TIME","SUB SUITE","SUITE","TEST CLASS","TEST METHOD"
-"","146","Users List","REQRES","Sun Mar 23 12:30:50 GMT 2025","passed","Sun Mar 23 12:30:51 GMT 2025","","","",""
-"","203","Create User","REQRES","Sun Mar 23 12:30:51 GMT 2025","passed","Sun Mar 23 12:30:51 GMT 2025","","","",""
-"","188","Update User","REQRES","Sun Mar 23 12:30:51 GMT 2025","passed","Sun Mar 23 12:30:51 GMT 2025","","","",""
-"","33","Single User","REQRES","Sun Mar 23 12:30:51 GMT 2025","passed","Sun Mar 23 12:30:51 GMT 2025","","","",""
-"","190","Unsuccessful Login","REQRES","Sun Mar 23 12:30:51 GMT 2025","passed","Sun Mar 23 12:30:51 GMT 2025","","","",""

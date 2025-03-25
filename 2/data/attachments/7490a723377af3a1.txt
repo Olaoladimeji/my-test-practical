@@ -1,5 +1,0 @@
-{
-    "name": "Halle_Harber",
-    "job": "Product Branding Developer",
-    "Email":"Annamarie.McCullough76@gmail.com"
-}
