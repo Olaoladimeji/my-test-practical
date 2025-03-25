@@ -2,7 +2,7 @@
 	"info": {
 		"_postman_id": "81f69976-2675-4e54-a02d-1e640d4e4dd5",
 		"name": "REQRES",
-		"schema": "https://schema.postman.com/json/collection/v2.0.0/collection.json"
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
 	},
 	"item": [
 		{
@@ -231,6 +231,18 @@
 					}
 				},
 				"url": "{{base_url}}/api/login"
+			},
+			"response": []
+		},
+		{
+			"name": "New Request",
+			"id": "5b35a024-a69e-4eb8-9488-f0f4902850de",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": []
 			},
 			"response": []
 		}
