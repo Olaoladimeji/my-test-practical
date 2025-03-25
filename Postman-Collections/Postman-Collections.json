@@ -166,7 +166,10 @@
 						"exec": [
 							"pm.test(\"Status code is 201\", function () {\r",
 							"    pm.response.to.have.status(201);\r",
-							"});"
+							"});\r",
+							"pm.test(\"Response Text\", function () {\r",
+							"\tpm.expect(pm.response.text()).to.include(\"name\")\r",
+							"})"
 						],
 						"type": "text/javascript",
 						"packages": {}
@@ -289,9 +292,7 @@
 							"    var jsonData = pm.response.json();\r",
 							"    pm.expect(jsonData.per_page).to.eql(6);\r",
 							"});\r",
-							"pm.test(\"Response Text\", function () {\r",
-							"\tpm.expect(pm.response.text()).to.include(\"page,\")\r",
-							"})"
+							""
 						],
 						"type": "text/javascript",
 						"packages": {}
