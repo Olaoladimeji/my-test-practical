@@ -285,10 +285,10 @@
 					"script": {
 						"id": "abfb484d-405c-42b7-828a-2021e3960d2d",
 						"exec": [
-							"// No changes needed for response time test\r",
-							"def test_total(self):\r",
-							"    self.assertEqual(self.data['total'], 12);\r",
-							""
+							"pm.test(\"Your test name\", function () {\r",
+							"    var jsonData = pm.response.json();\r",
+							"    pm.expect(jsonData.per_page).to.eql(6);\r",
+							"});"
 						],
 						"type": "text/javascript",
 						"packages": {}
