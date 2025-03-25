@@ -1,5 +1,0 @@
-{
-    "name": "Ricardo.Cole70",
-    "job": "Chief Intranet Manager",
-    "Email":"Stefanie5@gmail.com"
-}
