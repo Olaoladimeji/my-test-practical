@@ -168,7 +168,7 @@
 							"    pm.response.to.have.status(201);\r",
 							"});\r",
 							"pm.test(\"Response Text\", function () {\r",
-							"\tpm.expect(pm.response.text()).to.include(\"name\")\r",
+							"\tpm.expect(pm.response.text()).to.include(\"name,job,id,createdAt\")\r",
 							"})"
 						],
 						"type": "text/javascript",
