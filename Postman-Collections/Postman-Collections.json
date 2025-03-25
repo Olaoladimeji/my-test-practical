@@ -129,7 +129,14 @@
 							"    { \"name\": \"Alice Brown\", \"job\": \"QA Engineer\" },\r",
 							"    { \"name\": \"Bob Williams\", \"job\": \"UX Designer\" },\r",
 							"    { \"name\": \"Carol Davis\", \"job\": \"DevOps Engineer\" }\r",
-							"];"
+							"];\r",
+							"\r",
+							"// Pre-request Script\r",
+							"for (let i = 0; i < 10; i++) {\r",
+							"    // Generate random data\r",
+							"    const randomUserName = pm.variables.replaceIn('{{$randomUserName}}');\r",
+							"    const randomJobTitle = pm.variables.replaceIn('{{$randomJobTitle}}');\r",
+							"    const randomEmail = pm.variables.replaceIn('{{$randomEmail}}');"
 						],
 						"type": "text/javascript",
 						"packages": {}
@@ -145,7 +152,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n    for (let i = 0; i < 10; i++) {;\r\n    \"name\": \"{{$randomUserName}}\",\r\n    \"job\": \"{{$randomJobTitle}}\",\r\n    \"Email\":\"{{$randomEmail}}\"\r\n}",
+					"raw": "{\r\n    \"name\": \"{{$randomUserName}}\",\r\n    \"job\": \"{{$randomJobTitle}}\",\r\n    \"Email\":\"{{$randomEmail}}\"\r\n}",
 					"options": {
 						"raw": {
 							"language": "json"
