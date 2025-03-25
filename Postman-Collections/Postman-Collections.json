@@ -267,7 +267,7 @@
 						}
 					}
 				},
-				"url": "https://reqres.in/api/register"
+				"url": "{{base_url}}/api/register"
 			},
 			"response": []
 		}
