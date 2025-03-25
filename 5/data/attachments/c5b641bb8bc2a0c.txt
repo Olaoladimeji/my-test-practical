@@ -1,5 +1,0 @@
-{
-    "name": "Bennett.Spencer",
-    "job": "Direct Mobility Manager",
-    "Email":"Lorenza.Emard93@hotmail.com"
-}
