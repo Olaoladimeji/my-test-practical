@@ -130,13 +130,13 @@
 							"    { \"name\": \"Bob Williams\", \"job\": \"UX Designer\" },\r",
 							"    { \"name\": \"Carol Davis\", \"job\": \"DevOps Engineer\" }\r",
 							"];\r",
-							"\r",
 							"// Pre-request Script\r",
 							"for (let i = 0; i < 10; i++) {\r",
 							"    // Generate random data\r",
 							"    const randomUserName = pm.variables.replaceIn('{{$randomUserName}}');\r",
 							"    const randomJobTitle = pm.variables.replaceIn('{{$randomJobTitle}}');\r",
-							"    const randomEmail = pm.variables.replaceIn('{{$randomEmail}}');"
+							"    const randomEmail = pm.variables.replaceIn('{{$randomEmail}}');\r",
+							"};"
 						],
 						"type": "text/javascript",
 						"packages": {}
