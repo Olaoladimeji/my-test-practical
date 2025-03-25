@@ -145,7 +145,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n    \"name\": \"{{$randomUserName}}\",\r\n    \"job\": \"{{$randomJobTitle}}\",\r\n    \"Email\":\"{{$randomEmail}}\"\r\n}",
+					"raw": "{\r\n    for (let i = 0; i < 10; i++) {;\r\n    \"name\": \"{{$randomUserName}}\",\r\n    \"job\": \"{{$randomJobTitle}}\",\r\n    \"Email\":\"{{$randomEmail}}\"\r\n}",
 					"options": {
 						"raw": {
 							"language": "json"
